@@ -17,6 +17,10 @@ module gamezoo.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "dating.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "logo.atlas",
+				Path_game_zoo.ui_zoo_sk + "fqzs_0.png",
+				Path_game_zoo.ui_zoo_sk + "fqzs_1.png",
+				Path_game_zoo.ui_zoo_sk + "fqzs_2.png",
+				Path_game_zoo.ui_zoo_sk + "fqzs_3.png",
 			];
 			this._isNeedDuang = false;
 		}
@@ -46,7 +50,7 @@ module gamezoo.page {
 			super.onOpen();
 
 			this.initPlayerInfo();
-			(this._viewUI.view_hud as TongyongHudPage).onOpen(this._game, ZooPageDef.GAME_NAME);
+			(this._viewUI.view_hud as TongyongHudNqpPage).onOpen(this._game, ZooPageDef.GAME_NAME);
 			for (let index = 0; index < this._viewUI.box_right.numChildren; index++) {
 				this._viewUI.box_right._childs[index].visible = true;
 				Laya.Tween.from(this._viewUI.box_right._childs[index], {
