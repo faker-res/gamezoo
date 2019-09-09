@@ -3,7 +3,7 @@
 */
 module gamezoo.page {
 	export class ZooBeginPage extends game.gui.base.Page {
-		private _viewUI: ui.game_ui.feiqinzoushou.GoUI;
+		private _viewUI: ui.nqp.game_ui.feiqinzoushou.GoUI;
 
 		constructor(v: Game, onOpenFunc?: Function, onCloseFunc?: Function) {
 			super(v, onOpenFunc, onCloseFunc);

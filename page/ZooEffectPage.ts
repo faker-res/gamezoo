@@ -11,7 +11,7 @@ module gamezoo.page {
         private _imgs: LImage[] = [];
         private _effContainer: Laya.Sprite;
         private _totalNum: number = 0;
-        constructor(game: Game, box: Box, view: ui.game_ui.feiqinzoushou.FeiQinZouShouUI) {
+        constructor(game: Game, box: Box, view: ui.nqp.game_ui.feiqinzoushou.FeiQinZouShouUI) {
             this._game = game;
             this._box = box;
             this._grids = [];

@@ -69,7 +69,7 @@ module gamezoo.page {
     }
 
     export class ZooMapPage extends game.gui.base.Page {
-        private _viewUI: ui.game_ui.feiqinzoushou.FeiQinZouShouUI;
+        private _viewUI: ui.nqp.game_ui.feiqinzoushou.FeiQinZouShouUI;
         private _zooStory: ZooStory;
         private _zooMapInfo: ZooMapInfo;
         private _curChip: number;//当前选择筹码
@@ -1143,7 +1143,7 @@ module gamezoo.page {
         100: Path_game_zoo.ui_zoo + "sy_1.png",
     };
 
-    class MapRecordRender extends ui.game_ui.feiqinzoushou.component.RecordItemUI {
+    class MapRecordRender extends ui.nqp.game_ui.feiqinzoushou.component.RecordItemUI {
         private _game: Game;
         private _data: any;
         constructor() {
