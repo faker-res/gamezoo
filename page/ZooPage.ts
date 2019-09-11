@@ -89,7 +89,7 @@ module gamezoo.page {
 			TongyongPageDef.ins.alertRecharge(StringU.substitute("老板，您的金币少于{0}哦~\n补充点金币去大杀四方吧~", limit), () => {
 				this._game.uiRoot.general.open(DatingPageDef.PAGE_CHONGZHI);
 			}, () => {
-			}, false, PathGameTongyong.ui_tongyong_general + "btn_cz.png");
+			}, false, TongyongPageDef.TIPS_SKIN_STR['cz']);
 		}
 
 		private initPlayerInfo(): void {
