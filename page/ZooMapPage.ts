@@ -166,6 +166,7 @@ module gamezoo.page {
             this._viewUI.mouseThrough = true;
             this._game.playMusic(Path_game_zoo.music_zoo + "zoo_bgm.mp3");
             this._viewUI.btn_repeat.disabled = true;
+            this._viewUI.btn_spread.left = this._game.isFullScreen ? 25 : 10;
         }
 
         // 页面打开时执行函数
