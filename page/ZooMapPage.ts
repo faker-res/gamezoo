@@ -69,7 +69,7 @@ module gamezoo.page {
     }
 
     export class ZooMapPage extends game.gui.base.Page {
-        private _viewUI: ui.game_ui.feiqinzoushou.FeiQinZouShouUI;
+        private _viewUI: ui.nqp.game_ui.feiqinzoushou.FeiQinZouShouUI;
         private _zooStory: ZooStory;
         private _zooMapInfo: ZooMapInfo;
         private _curChip: number;//当前选择筹码
@@ -166,6 +166,7 @@ module gamezoo.page {
             this._viewUI.mouseThrough = true;
             this._game.playMusic(Path_game_zoo.music_zoo + "zoo_bgm.mp3");
             this._viewUI.btn_repeat.disabled = true;
+            this._viewUI.btn_spread.left = this._game.isFullScreen ? 25 : 10;
         }
 
         // 页面打开时执行函数
@@ -358,7 +359,7 @@ module gamezoo.page {
                 TongyongPageDef.ins.alertRecharge("老板，您的金币不足哦~\n补充点金币去大杀四方吧~", () => {
                     this._game.uiRoot.general.open(DatingPageDef.PAGE_CHONGZHI);
                 }, () => {
-                }, false, PathGameTongyong.ui_tongyong_general + "btn_cz.png");
+                }, true, TongyongPageDef.TIPS_SKIN_STR['cz']);
                 return;
             }
             if (this._curChip > money) {
@@ -888,7 +889,7 @@ module gamezoo.page {
         private showIsGuest(): boolean {
             if (this._game.sceneObjectMgr.mainPlayer.IsIsGuest()) {
                 TongyongPageDef.ins.alertRecharge("您选择了游客模式登录游戏，由于该模式下的游戏数据(包括付费数据)在删除游戏、更换设备后将被清空！对此造成的损失，本平台将不承担任何责任。为了您的虚拟财产安全，我们强烈建议您先绑定手机！",
-                    () => { }, () => { }, true, PathGameTongyong.ui_tongyong_general + "btn_qd.png");
+                    () => { }, () => { }, true,TongyongPageDef.TIPS_SKIN_STR['qd']);
                 return true;
             }
             return false;
@@ -1143,7 +1144,7 @@ module gamezoo.page {
         100: Path_game_zoo.ui_zoo + "sy_1.png",
     };
 
-    class MapRecordRender extends ui.game_ui.feiqinzoushou.component.RecordItemUI {
+    class MapRecordRender extends ui.nqp.game_ui.feiqinzoushou.component.RecordItemUI {
         private _game: Game;
         private _data: any;
         constructor() {

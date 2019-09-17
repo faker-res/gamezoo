@@ -9,7 +9,7 @@ module gamezoo.page {
 		static readonly TYPE_CARD_BEISHU: number = 3;
 		static readonly TYPE_GUANYU_WOMEN: number = 4;
 
-		private _viewUI: ui.game_ui.feiqinzoushou.FeiQinZouShou_GuiZeUI;
+		private _viewUI: ui.nqp.game_ui.feiqinzoushou.FeiQinZouShou_GuiZeUI;
 
 		constructor(v: Game, onOpenFunc?: Function, onCloseFunc?: Function) {
 			super(v, onOpenFunc, onCloseFunc);
