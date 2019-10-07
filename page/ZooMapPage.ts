@@ -107,7 +107,7 @@ module gamezoo.page {
                 PathGameTongyong.atlas_game_ui_tongyong + 'dating.atlas',
                 PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
-                PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
+                DatingPath.atlas_dating_ui + "qifu.atlas",
                 Path_game_zoo.atlas_game_ui + "feiqinzoushou.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "general/effect/suiji.atlas",
             ];
