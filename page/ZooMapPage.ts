@@ -208,7 +208,7 @@ module gamezoo.page {
             this._viewUI.btn_zhanji.on(LEvent.CLICK, this, this.onBtnClickWithTween);
             this._viewUI.btn_chong.on(LEvent.CLICK, this, this.onBtnClickWithTween);
             this._viewUI.btn_repeat.on(LEvent.CLICK, this, this.onBtnClickWithTween);
-            this._viewUI.btn_playerList.on(LEvent.CLICK, this, this.onBtnClickWithTween);
+            this._viewUI.btn_playerList.on(LEvent.CLICK, this, this.onClickHandle);
 
             for (let i: number = 0; i < this._chipList.length; i++) {
                 this._chipList[i] && this._chipList[i].on(LEvent.CLICK, this, this.onSelectChip, [i]);
@@ -248,6 +248,12 @@ module gamezoo.page {
             }
         }
 
+        //点击事件
+        protected onClickHandle(e: LEvent): void {
+            //玩家列表
+            this._game.uiRoot.general.open(ZooPageDef.PAGE_ZOO_PLAYER_LIST);
+        }
+
         //按钮缓动回调
         protected onBtnTweenEnd(e: any, target: any): void {
             switch (target) {
@@ -280,9 +286,6 @@ module gamezoo.page {
                     }
 
                     TongyongPageDef.ins.alertClose("zoo", this, this.onClickCancle);
-                    break;
-                case this._viewUI.btn_playerList://玩家列表
-                    this._game.uiRoot.general.open(ZooPageDef.PAGE_ZOO_PLAYER_LIST);
                     break;
                 case this._viewUI.btn_repeat:
                     if (this.showIsGuest()) return;
@@ -1058,7 +1061,7 @@ module gamezoo.page {
                 this._viewUI.btn_zhanji.off(LEvent.CLICK, this, this.onBtnClickWithTween);
                 this._viewUI.btn_chong.off(LEvent.CLICK, this, this.onBtnClickWithTween);
                 this._viewUI.btn_repeat.off(LEvent.CLICK, this, this.onBtnClickWithTween);
-                this._viewUI.btn_playerList.off(LEvent.CLICK, this, this.onBtnClickWithTween);
+                this._viewUI.btn_playerList.off(LEvent.CLICK, this, this.onClickHandle);
             }
 
             if (this._chipList) {
