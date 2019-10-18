@@ -172,6 +172,9 @@ module gamezoo.page {
         // 页面打开时执行函数
         protected onOpen(): void {
             super.onOpen();
+            //api充值不显示
+            this._viewUI.btn_chongzhi.visible = !WebConfig.enterGameLocked;
+
             this._zooStory = this._game.sceneObjectMgr.story as ZooStory;
 
             this._game.sceneObjectMgr.on(ZooMapInfo.EVENT_STATUS_CHECK, this, this.onUpdateStatus);
@@ -206,7 +209,7 @@ module gamezoo.page {
             this._viewUI.btn_set.on(LEvent.CLICK, this, this.onBtnClickWithTween);
             this._viewUI.btn_qifu.on(LEvent.CLICK, this, this.onBtnClickWithTween);
             this._viewUI.btn_zhanji.on(LEvent.CLICK, this, this.onBtnClickWithTween);
-            this._viewUI.btn_chong.on(LEvent.CLICK, this, this.onBtnClickWithTween);
+            this._viewUI.btn_chongzhi.on(LEvent.CLICK, this, this.onBtnClickWithTween);
             this._viewUI.btn_repeat.on(LEvent.CLICK, this, this.onBtnClickWithTween);
             this._viewUI.btn_playerList.on(LEvent.CLICK, this, this.onBtnClickWithTween);
 
@@ -288,7 +291,7 @@ module gamezoo.page {
                     if (this.showIsGuest()) return;
                     this.repeatBet();
                     break;
-                case this._viewUI.btn_chong:
+                case this._viewUI.btn_chongzhi:
                     this._game.uiRoot.general.open(DatingPageDef.PAGE_CHONGZHI);
                     break;
                 default:
@@ -1056,7 +1059,7 @@ module gamezoo.page {
                 this._viewUI.btn_set.off(LEvent.CLICK, this, this.onBtnClickWithTween);
                 this._viewUI.btn_qifu.off(LEvent.CLICK, this, this.onBtnClickWithTween);
                 this._viewUI.btn_zhanji.off(LEvent.CLICK, this, this.onBtnClickWithTween);
-                this._viewUI.btn_chong.off(LEvent.CLICK, this, this.onBtnClickWithTween);
+                this._viewUI.btn_chongzhi.off(LEvent.CLICK, this, this.onBtnClickWithTween);
                 this._viewUI.btn_repeat.off(LEvent.CLICK, this, this.onBtnClickWithTween);
                 this._viewUI.btn_playerList.off(LEvent.CLICK, this, this.onBtnClickWithTween);
             }
