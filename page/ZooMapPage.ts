@@ -288,7 +288,6 @@ module gamezoo.page {
                     TongyongPageDef.ins.alertClose("zoo", this, this.onClickCancle);
                     break;
                 case this._viewUI.btn_repeat:
-                    if (this.showIsGuest()) return;
                     this.repeatBet();
                     break;
                 case this._viewUI.btn_chong:
@@ -315,7 +314,6 @@ module gamezoo.page {
 
         //重复下注
         private repeatBet(): void {
-            if (this.showIsGuest()) return;
             let betArr = [];
             let total = 0;
             for (let i = 0; i < this._rebetList.length; i++) {
@@ -346,7 +344,6 @@ module gamezoo.page {
         //下注
         private _betWait: boolean = false;
         private onAreaBetClick(index: number, e: LEvent): void {
-            if (this.showIsGuest()) return;
             if (this._curStatus != MAP_STATUS.PLAY_STATUS_BET) {
                 this._game.uiRoot.topUnder.showTips("当前不在下注时间，请在下注时间再进行下注！");
                 return;
@@ -887,15 +884,6 @@ module gamezoo.page {
             if (this._effPage) {
                 this._effPage.clear();
             }
-        }
-
-        private showIsGuest(): boolean {
-            if (this._game.sceneObjectMgr.mainPlayer.IsIsGuest()) {
-                TongyongPageDef.ins.alertRecharge("您选择了游客模式登录游戏，由于该模式下的游戏数据(包括付费数据)在删除游戏、更换设备后将被清空！对此造成的损失，本平台将不承担任何责任。为了您的虚拟财产安全，我们强烈建议您先绑定手机！",
-                    () => { }, () => { }, true,TongyongPageDef.TIPS_SKIN_STR['qd']);
-                return true;
-            }
-            return false;
         }
 
         //金币变化 飘字clip
