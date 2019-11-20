@@ -94,7 +94,7 @@ module gamezoo.page {
 
 		private initPlayerInfo(): void {
 			for (let index = 0; index < this._xianhongClipList.length; index++) {
-				this._xianhongClipList[index].setText(this._xianhongTmep[index], true);
+				this._xianhongClipList[index] && this._xianhongClipList[index].setText(this._xianhongTmep[index], true);
 			}
 		}
 
