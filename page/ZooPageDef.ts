@@ -46,13 +46,9 @@ module gamezoo.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/kaipai.atlas",
 				Path_game_zoo.atlas_game_ui + "feiqinzoushou.atlas",
 				Path_game_zoo.ui_zoo_sk + "fqzs_0.png",
-				Path_game_zoo.ui_zoo_sk + "fqzs_0.sk",
 				Path_game_zoo.ui_zoo_sk + "fqzs_1.png",
-				Path_game_zoo.ui_zoo_sk + "fqzs_1.sk",
 				Path_game_zoo.ui_zoo_sk + "fqzs_2.png",
-				Path_game_zoo.ui_zoo_sk + "fqzs_2.sk",
 				Path_game_zoo.ui_zoo_sk + "fqzs_3.png",
-				Path_game_zoo.ui_zoo_sk + "fqzs_3.sk",
 				Path.custom_atlas_scene + 'chip.atlas',
 
 				Path.map + 'pz_zoo.png',
