@@ -342,6 +342,11 @@ module gamezoo.page {
                     }
                 }
             }
+            // this.moveHead(this._viewUI.main_player, this._mainHeadPos[0][0], this._mainHeadPos[0][1], this._mainHeadPos[1][0], this._mainHeadPos[1][1]);
+            this._betWait = true;
+            Laya.timer.once(100, this, () => {
+                this._betWait = false;
+            })
         }
 
         //下注
@@ -781,6 +786,9 @@ module gamezoo.page {
                     this._viewUI.btn_repeat.disabled = !bool;
                     break;
                 case MAP_STATUS.PLAY_STATUS_STOP_BET:// 停止下注阶段
+                    // for (let i: number = 0; i < this._areaKuangUIList.length; i++) {
+                    //     this._areaKuangUIList[i].visible = false;
+                    // }
                     this._pageHandle.pushOpen({ id: ZooPageDef.PAGE_ZOO_END, parent: this._game.uiRoot.HUD });
                     this._game.playSound(Path_game_zoo.music_zoo + "dingding_end.mp3");
                     this._game.playSound(Path_game_zoo.music_zoo + "xiazhu_end.mp3");
