@@ -102,12 +102,13 @@ module gamezoo.page {
             this._isNeedDuang = false;
             this._delta = 1000;
             this._asset = [
+                DatingPath.atlas_dating_ui + "qifu.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "pai.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + 'dating.atlas',
                 PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
-                DatingPath.atlas_dating_ui + "qifu.atlas",
+                PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
                 Path_game_zoo.atlas_game_ui + "feiqinzoushou.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "general/effect/suiji.atlas",
             ];
@@ -711,7 +712,7 @@ module gamezoo.page {
                 this.moveHead(this._viewUI.btn_playerList, 49, 580, 67, 562);
             }
             targetIdx = info.BetIndex;
-            let type = this._chipArr.indexOf(info.BetVal) + 1;
+            let type = this._chipArr.indexOf(info.BetVal);
             this.createChip(startIdx, targetIdx, type, info.BetVal, index, info.SeatIndex);
             this.updateChipOnTable(targetIdx - 1, info.BetVal, isMainPlayer);
         }
@@ -974,8 +975,8 @@ module gamezoo.page {
                     this._game.playSound(Path_game_zoo.music_zoo + "chouma_fly.mp3", false);
                     for (let j = 0; j < 20; j++) {
                         if (chipArr.length > 0) {
-                            let ranType = MathU.randomRange(1, 5);
-                            let ranVal = this._chipArr[ranType - 1];
+                            let ranType = MathU.randomRange(0, 4);
+                            let ranVal = this._chipArr[ranType];
                             this._chipSortScore++;
                             this.bankerFlyChip(2, i + 1, ranType, ranVal, this._chipSortScore, -1);
                         }
@@ -1005,8 +1006,8 @@ module gamezoo.page {
                             this._game.playSound(Path_game_zoo.music_zoo + "chouma_fly.mp3", false);
                             for (let j = 0; j < 20; j++) {
                                 if (chipArr.length > 0) {
-                                    let ranType = MathU.randomRange(1, 5);
-                                    let ranVal = this._chipArr[ranType - 1];
+                                    let ranType = MathU.randomRange(0, 4);
+                                    let ranVal = this._chipArr[ranType];
                                     this._chipSortScore++;
                                     this.bankerFlyChip(2, i + 1, ranType, ranVal, this._chipSortScore, -1);
                                 }
