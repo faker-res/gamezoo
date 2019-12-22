@@ -108,9 +108,9 @@ module gamezoo.page {
 				for (let index = 0; index < this._viewUI.box_right.numChildren; index++) {
 					Laya.timer.clearAll(this._viewUI.box_right._childs[index]);
 				}
+				this._player = null;
+				this._game.stopMusic();
 			}
-			this._player = null;
-			this._game.stopMusic();
 
 			super.close();
 		}
