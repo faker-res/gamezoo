@@ -10,16 +10,12 @@ module gamezoo.page {
 		static PAGE_ZOO_MAP: string = "2";
 		//飞禽走兽开始下注界面
 		static PAGE_ZOO_BEGIN: string = "3";
-		//飞禽走兽游戏通杀界面
-		static PAGE_ZOO_TONGSHA: string = "4";
-		//飞禽走兽游戏通赔界面
-		static PAGE_ZOO_TONGPEI: string = "5";
+		//飞禽走兽玩家列表界面
+		static PAGE_ZOO_PLAYER_LIST: string = "4";
+		//飞禽走兽停止下注界面
+		static PAGE_ZOO_END: string = "5";
 		//飞禽走兽游戏规则界面
 		static PAGE_ZOO_RULE: string = "101";
-		//飞禽走兽玩家列表界面
-		static PAGE_ZOO_PLAYER_LIST: string = "10";
-		//飞禽走兽停止下注界面
-		static PAGE_ZOO_END: string = "11";
 
 
 		static myinit(str: string) {
@@ -28,8 +24,6 @@ module gamezoo.page {
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO] = ZooPage;
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_MAP] = ZooMapPage;
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_BEGIN] = ZooBeginPage;
-			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_TONGSHA] = ZooTongShaPage;
-			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_TONGPEI] = ZooTongPeiPage;
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_RULE] = ZooRulePage;
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_PLAYER_LIST] = ZooPlayerListPage;
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_END] = ZooEndPage;

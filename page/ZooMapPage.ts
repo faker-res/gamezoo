@@ -757,8 +757,8 @@ module gamezoo.page {
             if (this._curStatus == mapinfo.GetMapState()) return;
             this._curStatus = mapinfo.GetMapState();
             this._viewUI.btn_repeat.disabled = this._curStatus != MAP_STATUS.PLAY_STATUS_BET;
-            if (this._game.uiRoot.HUD.isOpened(ZooPageDef.PAGE_ZOO_TONGSHA) && this._curStatus >= MAP_STATUS.PLAY_STATUS_WASH_CARD) {
-                this._game.uiRoot.HUD.close(ZooPageDef.PAGE_ZOO_TONGSHA)
+            if (this._game.uiRoot.HUD.isOpened(TongyongPageDef.PAGE_TONGYONG_ZJTS) && this._curStatus >= MAP_STATUS.PLAY_STATUS_WASH_CARD) {
+                this._game.uiRoot.HUD.close(TongyongPageDef.PAGE_TONGYONG_ZJTS)
             }
             this._viewUI.box_tip.visible = false;
             switch (this._curStatus) {
