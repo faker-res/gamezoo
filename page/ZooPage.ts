@@ -6,7 +6,7 @@ module gamezoo.page {
 		private _viewUI: ui.nqp.game_ui.feiqinzoushou.FeiQinZouShou_HUDUI;
 		private _player: any;
 		private _xianhongTmep: any = [5000, 8000, 25000, 50000];
-		private _xianhongClipList: ClipUtil[] = [];
+		private _xianhongClipList: ZooClip[] = [];
 
 		constructor(v: Game, onOpenFunc?: Function, onCloseFunc?: Function) {
 			super(v, onOpenFunc, onCloseFunc);
@@ -36,7 +36,7 @@ module gamezoo.page {
 			}
 			for (let index = 0; index < 4; index++) {
 				if (!this._xianhongClipList[index]) {
-					this._xianhongClipList[index] = new ClipUtil(ClipUtil.HUD_FONT);
+					this._xianhongClipList[index] = new ZooClip(ZooClip.HUD_FONT);
 					this._xianhongClipList[index].x = this._viewUI["clip_xianhong" + index].x;
 					this._xianhongClipList[index].y = this._viewUI["clip_xianhong" + index].y;
 					this._viewUI["clip_xianhong" + index].parent && this._viewUI["clip_xianhong" + index].parent.addChild(this._xianhongClipList[index]);
