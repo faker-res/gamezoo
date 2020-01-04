@@ -34,7 +34,6 @@ module gamezoo.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
-				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/suiji.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/kaipai.atlas",
 				Path_game_zoo.atlas_game_ui + "feiqinzoushou.atlas",
 				Path_game_zoo.ui_zoo_sk + "fqzs_0.png",
