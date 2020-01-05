@@ -26,7 +26,6 @@ module gamezoo.page {
 			PageDef._pageClassMap[ZooPageDef.PAGE_ZOO_END] = ZooEndPage;
 
 			this["__needLoadAsset"] = [
-				DatingPath.atlas_dating_ui + "qifu.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "pai.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "logo.atlas",
